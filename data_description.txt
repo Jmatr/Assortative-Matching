@@ -1,0 +1,45 @@
+Data Description
+
+COHORT: 	
+	Represents the decade in which individuals were born. For example, COHORT 1930 refers to individuals born in the 1930s, COHORT 1940 refers to those born in the 1940s, and so on. 
+	Cohort is calculated based on survey data in year 1974, 1984, 1994, 2004, 2014, 2024 for age between 35 and 44 to avoid double counting.
+BIRTH_YEAR: 
+	The calculated year of birth for each individual, derived by subtracting the individual's age from the year of data collection.
+HOUSEHOLD:
+	A unique identifier for each household, allowing the identification of individuals living together in the same household.
+AGE: 
+	The age of the individual at the time of data collection.
+SEX:
+	Gender of the individual. Values include: Male, Female
+EDUC: 
+	The number assigned to the education level according to the IPUMS coding scheme. This value corresponds to the individual's highest educational attainment.
+EDUC_SP: 
+	The education level of the spouse, also based on the IPUMS coding scheme.
+
+Derived Educational Categories
+Several additional columns represent educational categories based on the EDUC values:
+
+High School and Below (HSB): 
+	Individuals whose education level is less than or equal to 73. This category includes those who completed high school or attained a lower level of education.
+College and Above (CA): 
+	Individuals whose education level is greater than or equal to 111. This category includes individuals with a college degree or higher.
+Some College (SC): 
+	Individuals whose education level falls between 73 and 111. This category includes those who have attended some college but have not completed a degree.
+Below College (CB): 
+	Individuals whose education level is below 111. This category includes those who did not attain a college degree.
+Some College and Above (SCA): 
+	Individuals whose education level is greater than or equal to 73, which includes those who have attended some college and those who completed a college degree or higher.
+
+Spouse Education Categories
+These categories are also calculated for the spouse of the individual:
+
+HSB_SP: 
+	High School and Below category for the spouse (EDUC_SP ≤ 73).
+CA_SP: 
+	College and Above category for the spouse (EDUC_SP ≥ 111).
+SC_SP: 
+	Some College category for the spouse (73 < EDUC_SP < 111).
+CB_SP: 
+	Below College category for the spouse (EDUC_SP < 111).
+SCA_SP: 
+	Some College and Above category for the spouse (EDUC_SP ≥ 73).
